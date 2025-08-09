@@ -2,8 +2,9 @@ import React from 'react'
 
 function App() {
   return (
-    <div>React project </div>
+    <div>
+      <h1>React project </h1>
+    </div>
   )
 }
-
 export default App
