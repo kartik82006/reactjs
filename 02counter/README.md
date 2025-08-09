@@ -10,3 +10,12 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+_Last updated: June 13, 2024_
+
+## What I learned
+
+- Learned how to use the `useState` hook for managing state in React components.
+- Explored how React's reconciliation process efficiently updates the DOM.
+- Studied the React Fiber architecture and how it improves rendering performance.
