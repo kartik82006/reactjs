@@ -1,12 +1,11 @@
-# React + Vite
+## Project: bgChanger & Reusable Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project includes a background changer app built with React and Vite. The bgChanger allows users to change the background color dynamically, demonstrating state management and event handling in React.
 
-Currently, two official plugins are available:
+While building this project, I learned how to create and use reusable components in React. Reusable components help keep code organized, reduce duplication, and make it easier to maintain and scale applications. Examples include custom button components, color pickers, and layout elements that can be used in multiple places throughout the app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Key learnings:
+- How to manage state and props in React
+- How to build and use reusable components
+- How to handle user events to update UI
+- How to structure a React project with Vite
