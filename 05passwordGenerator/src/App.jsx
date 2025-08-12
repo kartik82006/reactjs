@@ -23,8 +23,7 @@ function App() {
   }, [length, includeNumbers, includeSymbols]);
 
   const copyPasswordToClipboard = useCallback(()=>{
-    passwordRef.current?.select()
-    // passwordRef.current?.setSelectionRange(0,9)
+    passwordRef.current?.select();
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
