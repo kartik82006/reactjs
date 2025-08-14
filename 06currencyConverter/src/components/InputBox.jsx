@@ -11,13 +11,14 @@ function InputBox({
     currencyDisable = false,
     className = "",
 }) {
-
+   const amountInputId = useId();
+   // useId just generates a random key to be used as the id for the input element
 
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
-                <label className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
                 {label}
                 </label>
                 <input
@@ -26,6 +27,7 @@ function InputBox({
                     placeholder="Amount"
                     disabled={amountDisable}
                     value={amount}
+                    id={amountInputId}
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                     // it checks that onAmountChange has a value before calling it
                 />
