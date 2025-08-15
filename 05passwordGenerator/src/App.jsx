@@ -32,7 +32,7 @@ function App() {
   },[length, includeNumbers, includeSymbols]);
   return (
     <>
-     <div className="w-full max-w-md mx-auto shadow-xl rounded-xl m-8 px-4 m-2 text-orange-500 bg-gray-800">
+     <div className="w-full max-w-md mx-auto shadow-xl rounded-xl m-8 px-4 text-orange-500 bg-gray-800">
        <h1 className='text-4xl text-center text-white'>
          Password Generator
        </h1>
