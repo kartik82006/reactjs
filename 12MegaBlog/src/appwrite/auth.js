@@ -15,9 +15,10 @@ export class AuthService{
 
     async createAccount({email,password,name}){
         try{
-            const userAccount = await this.account.create(ID.unique(),email,password,name);
+            const userAccount = await this.account.create({userId: ID.unique(), email: email, password: password, name: name});
             if(userAccount){
-                return userAccount;
+                
+                return this.login({email,password});
                 //call another method to create login session
             }
             else{
@@ -25,6 +26,42 @@ export class AuthService{
             }
         } catch(error){
             throw error;
+        }
+    }
+    async login({email,password}){
+        try{
+            await this.account.createEmailPasswordSession({
+                email:email,
+                password:password
+            });
+        } catch(error){
+            throw error;
+        }
+    }
+
+    async getCurrentUser(){
+        try {
+        // If successful, user is authenticated
+        const user = await this.account.get();
+        console.log("User is authenticated:", user);
+        return user;
+    } catch (error) {
+        console.error("User is not authenticated:", error);
+        // Redirect to login page or show login UI
+        // window.location.href = '/login';
+        return null;
+    }
+    return null;
+    }
+
+    async logout(){
+        try{
+            await this.account.deleteSession({
+                sessionId: 'current'
+            });
+        }
+        catch(error){
+            console.log("unable to logout", error);
         }
     }
 }
