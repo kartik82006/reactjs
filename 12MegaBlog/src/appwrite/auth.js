@@ -66,5 +66,5 @@ export class AuthService{
     }
 }
 const authService = new AuthService()
-// made an object so that we can export and use directly using . in other files
+// made an object so that we can export and use directly using in other files
 export default authService;
